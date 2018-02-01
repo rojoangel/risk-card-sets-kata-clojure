@@ -18,6 +18,9 @@
 (defn- some-joker? [collection]
   (some set/joker? collection))
 
+(defn- only-two-symbols? [collection]
+  (= 2 (count (distinct collection))))
+
 (defmethod contains-valid-set? 4 [collection]
   (or (some-joker? collection)
-    (not= 2 (count (distinct collection)))))
+    (not (only-two-symbols? collection))))

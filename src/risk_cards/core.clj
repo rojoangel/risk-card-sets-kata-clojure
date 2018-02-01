@@ -14,4 +14,4 @@
 
 (defn valid? [card-set]
   (or (all-equal? (remove-jokers card-set))
-      (all-different? card-set)))
+      (all-different? (remove-jokers card-set))))

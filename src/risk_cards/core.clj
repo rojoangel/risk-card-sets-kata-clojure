@@ -6,7 +6,7 @@
 (defn- all-different? [card-set]
   (= card-set (distinct card-set)))
 
-(defn remove-jokers [card-set]
+(defn- remove-jokers [card-set]
   (remove #(= \J %) card-set))
 
 (defn valid? [card-set]

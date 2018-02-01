@@ -21,4 +21,6 @@
       (is (= false (collection/contains-valid-set? [\H \H \S])))))
   (testing "A collection of 4 cards"
     (testing "should contain only two symbols to be invalid"
-      (is (= false (collection/contains-valid-set? [\H \H \S \S]))))))
+      (is (= false (collection/contains-valid-set? [\H \H \S \S]))))
+    (testing "otherwise is valid"
+      (is (= true (collection/contains-valid-set? [\H \C \S \S]))))))

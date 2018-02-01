@@ -15,5 +15,5 @@
 (defmethod contains-valid-set? 3 [collection]
   (set/valid? collection))
 
-(defmethod contains-valid-set? 4 [_]
-  false)
+(defmethod contains-valid-set? 4 [collection]
+  (not= 2 (count (distinct collection))))

@@ -13,5 +13,6 @@
   (remove joker? card-set))
 
 (defn valid? [card-set]
-  (or (all-equal? (remove-jokers card-set))
-      (all-different? (remove-jokers card-set))))
+  (->> card-set
+       (remove-jokers)
+       ((some-fn all-equal? all-different?))))

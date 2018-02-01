@@ -1,4 +1,5 @@
 (ns risk-cards.core)
 
 (defn valid? [card-set]
-  (apply = card-set))
+  (or (apply = card-set)
+      (= card-set (distinct card-set))))

@@ -9,20 +9,11 @@
 
 (defmulti contains-valid-set? count)
 
-(defmethod contains-valid-set? 0 [_]
-  false)
-
-(defmethod contains-valid-set? 1 [_]
-  false)
-
-(defmethod contains-valid-set? 2 [_]
-  false)
-
 (defmethod contains-valid-set? 3 [collection]
   (set/valid? collection))
 
 (defmethod contains-valid-set? 4 [collection]
   ((some-fn some-joker? (complement only-two-symbols?)) collection))
 
-(defmethod contains-valid-set? 5 [_]
-  true)
+(defmethod contains-valid-set? :default [collection]
+  (< 4 (count collection)))

@@ -12,6 +12,8 @@
     (testing "contain cards with the same symbol and jokers"
       (is (= true (card-set/valid? [\H \H \J]))))
     (testing "contain cards with all symbols different and jokers"
-      (is (= true (card-set/valid? [\C \S \J]))))))
+      (is (= true (card-set/valid? [\C \S \J]))))
+    (testing "contain one card and two jokers"
+      (is (= true (card-set/valid? [\C \J \J]))))))
 
 

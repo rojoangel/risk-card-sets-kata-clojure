@@ -5,5 +5,6 @@
 (deftest valid-sets
   (testing "A valid collection of cards set should"
     (testing "contain only cards with the same symbol"
-      (is (= true (card-set/valid? [\H \H \H]))))))
+      (is (= true (card-set/valid? [\H \H \H])))
+      (is (= false (card-set/valid? [\H \H \C]))))))
 

@@ -10,6 +10,8 @@
     (testing "contain cards with all symbols different"
       (is (= true (card-set/valid? [\C \S \H]))))
     (testing "contain cards with the same symbol and jokers"
-      (is (= true (card-set/valid? [\H \H \J]))))))
+      (is (= true (card-set/valid? [\H \H \J]))))
+    (testing "contain cards with all symbols different and jokers"
+      (is (= true (card-set/valid? [\C \S \J]))))))
 
 

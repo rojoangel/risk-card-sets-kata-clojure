@@ -9,4 +9,6 @@
     (is (= false (collection/contains-valid-set? [\H])))
     (is (= false (collection/contains-valid-set? [\S])))
     (is (= false (collection/contains-valid-set? [\C])))
-    (is (= false (collection/contains-valid-set? [\J])))))
+    (is (= false (collection/contains-valid-set? [\J]))))
+  (testing "A collection of 2 cards does not contain a valid set"
+    (is (= false (collection/contains-valid-set? [\H \S])))))

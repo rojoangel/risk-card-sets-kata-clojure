@@ -7,3 +7,6 @@
 
 (defmethod contains-valid-set? 1 [_]
   false)
+
+(defmethod contains-valid-set? 2 [_]
+  false)

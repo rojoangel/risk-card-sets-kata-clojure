@@ -25,4 +25,7 @@
     (testing "be valid if contains jokers"
       (is (= true (collection/contains-valid-set? [\H \H \J \J]))))
     (testing "be valid otherwise"
-      (is (= true (collection/contains-valid-set? [\H \C \S \S]))))))
+      (is (= true (collection/contains-valid-set? [\H \C \S \S])))))
+  (testing "A collection of 5+ cards should"
+    (testing "contain a valid set"
+      (is (= true (collection/contains-valid-set? [\H \H \J \S \C]))))))

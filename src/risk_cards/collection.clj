@@ -23,3 +23,6 @@
 
 (defmethod contains-valid-set? 4 [collection]
   ((some-fn some-joker? (complement only-two-symbols?)) collection))
+
+(defmethod contains-valid-set? 5 [_]
+  true)

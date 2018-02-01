@@ -4,3 +4,6 @@
 
 (defmethod contains-valid-set? 0 [_]
   false)
+
+(defmethod contains-valid-set? 1 [_]
+  false)

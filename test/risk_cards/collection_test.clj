@@ -4,4 +4,6 @@
 
 (deftest collection-of-cards-contains-a-valid-set
   (testing "A collection of 0 cards does not contain a valid set"
-    (is (= false (collection/contains-valid-set? [])))))
+    (is (= false (collection/contains-valid-set? []))))
+  (testing "A collection of 1 cards does not contain a valid set"
+    (is (= false (collection/contains-valid-set? [\H])))))

@@ -19,8 +19,8 @@
       (is (= true (collection/contains-valid-set? [\H \S \C]))))
     (testing "not contain a valid set if not all cards equal or different"
       (is (= false (collection/contains-valid-set? [\H \H \S])))))
-  (testing "A collection of 4 cards"
-    (testing "should contain only two symbols to be invalid"
+  (testing "A collection of 4 cards should"
+    (testing "be invalid if contains only two symbols"
       (is (= false (collection/contains-valid-set? [\H \H \S \S]))))
-    (testing "otherwise is valid"
+    (testing "be valid otherwise"
       (is (= true (collection/contains-valid-set? [\H \C \S \S]))))))

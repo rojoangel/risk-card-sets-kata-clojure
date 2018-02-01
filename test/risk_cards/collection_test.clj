@@ -6,4 +6,7 @@
   (testing "A collection of 0 cards does not contain a valid set"
     (is (= false (collection/contains-valid-set? []))))
   (testing "A collection of 1 cards does not contain a valid set"
-    (is (= false (collection/contains-valid-set? [\H])))))
+    (is (= false (collection/contains-valid-set? [\H])))
+    (is (= false (collection/contains-valid-set? [\S])))
+    (is (= false (collection/contains-valid-set? [\C])))
+    (is (= false (collection/contains-valid-set? [\J])))))

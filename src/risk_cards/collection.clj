@@ -1,4 +1,5 @@
-(ns risk-cards.collection)
+(ns risk-cards.collection
+  (:require [risk-cards.set :as set]))
 
 (defmulti contains-valid-set? count)
 
@@ -10,3 +11,6 @@
 
 (defmethod contains-valid-set? 2 [_]
   false)
+
+(defmethod contains-valid-set? 3 [collection]
+  (set/valid? collection))

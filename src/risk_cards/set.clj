@@ -1,4 +1,4 @@
-(ns risk-cards.core)
+(ns risk-cards.set)
 
 (defn- all-equal? [card-set]
   (apply = card-set))

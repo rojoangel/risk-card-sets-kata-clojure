@@ -17,5 +17,5 @@
 
 (defmethod contains-valid-set? 4 [collection]
   (or
-    (not= collection (set/remove-jokers collection))
+    (some set/joker? collection)
     (not= 2 (count (distinct collection)))))

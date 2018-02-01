@@ -22,5 +22,7 @@
   (testing "A collection of 4 cards should"
     (testing "be invalid if contains only two symbols"
       (is (= false (collection/contains-valid-set? [\H \H \S \S]))))
+    (testing "be valid if contains jokers"
+      (is (= true (collection/contains-valid-set? [\H \H \J \J]))))
     (testing "be valid otherwise"
       (is (= true (collection/contains-valid-set? [\H \C \S \S]))))))

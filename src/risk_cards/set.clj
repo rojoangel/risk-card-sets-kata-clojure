@@ -9,7 +9,7 @@
 (defn- joker? [card]
   (= \J card))
 
-(defn- remove-jokers [card-set]
+(defn remove-jokers [card-set]
   (remove joker? card-set))
 
 (defn valid? [card-set]
